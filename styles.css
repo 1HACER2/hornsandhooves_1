@@ -16,7 +16,7 @@ a:hover {
 
 /* Общие стили для тела страницы */
 body {
-    font-family: Arial, sans-serif; /* Шрифт для текста */
+     font-family: 'Verdana', sans-serif; /* Шрифт для текста */
     line-height: 1.6; /* Высота строки для лучшей читаемости */
     margin: 0; /* Убираем отступы по умолчанию */
     padding: 20px; /* Добавляем отступы */
@@ -39,7 +39,11 @@ nav ul li {
     display: inline; /* Выстраиваем ссылки в строку */
     margin: 0 15px; /* Добавляем отступы между ссылками */
 }
-
+/* стили для абзацев */
+p {
+    color: #333; /* Задайте желаемый цвет текста */
+    font-family: 'Arial', sans-serif; /* Замените на нужную гарнитуру шрифта */
+}
 /* Стили для основного контента */
 main {
     background: white; /* Цвет фона основного контента */
@@ -108,4 +112,52 @@ body {
 
 .gallery:hover .caption {
     opacity: 1; /* Показать при наведении */
+}
+img {
+    border: 3px dotted blue; /* Задаем толщину, стиль и цвет рамки */
+    width: 100px; /* Ширина изображений */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    border-radius: 30%; /* Круглая форма изображений */
+}
+.menu a {
+    color: #ff5733; /* Ярко-оранжевый цвет для ссылок в меню */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-weight: bold; /* Делаем текст жирным */
+}
+
+.menu a:hover {
+    color: #c70039; /* Цвет при наведении */
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+table {
+    width: 100%; /* Занимает всю ширину контейнера */
+    border-collapse: collapse; /* Убирает двойные границы между ячейками */
+    margin: 20px 0; /* Отступы сверху и снизу */
+    font-family: 'Arial', sans-serif; /* Гарнитура шрифта */
+}
+th, td {
+    border: 3px solid #3498db; /* Синяя рамка для ячеек */
+    padding: 10px; /* Отступы внутри ячеек */
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+th {
+    background-color: #2980b9; /* Цвет фона заголовков */
+    color: white; /* Цвет текста заголовков */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Светло-серый фон для четных строк */
+}
+
+tr:hover {
+    background-color: #d1e7fd; /* Цвет фона строки при наведении */
+}
+.menu a.external-link {
+    color: #e74c3c; /* Красный цвет для внешней ссылки */
+    font-weight: bold; /* Жирный текст */
+}
+
+.menu a.external-link:hover {
+    text-decoration: underline; /* Подчеркивание при наведении */
 }
