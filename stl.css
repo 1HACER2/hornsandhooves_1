@@ -1,0 +1,168 @@
+body {
+    font: 10pt Arial, Helvetica, sans-serif; /* Шрифт на веб-странице */
+    background: #e1dfb9; /* Цвет фона */
+    
+   }
+   h2 {
+    font-size: 1.1em; /* Размер шрифта */
+    color: #800040; /* Цвет текста */
+    margin-top: 0; /* Отступ сверху */
+    text-align: center; /* Центрирование текста на странице */
+    
+   }
+   #container {
+    width: 800px; /* Ширина слоя */
+    margin: 0 auto; /* Выравнивание по центру */
+    background: #f0f0f0; /* Цвет фона левой колонки */
+   }
+   #header {
+    font-size: 2.2em; /* Размер текста для верхнего заголовка */
+    text-align: center; /* Выравнивание по центру */
+    padding: 5px; /* Отступы вокруг текста */
+    background: #8fa09b; /* Цвет фона шапки */
+    color: #ffe; /* Цвет текста */
+}
+
+.sub-header {
+    font-size: 1.5em; /* Размер текста для нижнего заголовка */
+    text-align: center; /* Выравнивание по центру */
+    padding: 5px; /* Отступы вокруг текста */
+    background: #8fa09b; /* Цвет фона, можно оставить тем же */
+    color: #ffe; /* Цвет текста, можно оставить тем же */
+}
+   #sidebar {
+    margin-top: 15px; 
+    width: 100px; /* Ширина слоя */
+    padding: 0 10px; /* Отступы вокруг текста */
+    float: left; /* Обтекание по правому краю */
+   }
+   #content {
+    margin-left: 110px; /* Отступ слева */
+    padding: 10px; /* Поля вокруг текста */
+    background: #fff; /* Цвет фона правой колонки */
+    min-height: 300px; /* Минимальная высота контейнера */
+}
+#footer {
+    background: #8fa09b; /* Цвет фона подвала */
+    color: #fff; /* Цвет текста */
+    padding: 5px; /* Отступы вокруг текста */
+    clear: left; /* Отменяем действие float */
+    position: relative; /* Устанавливаем относительное позиционирование */
+}
+
+.scroll-to-top {
+    position: absolute; /* Изменяем на абсолютное позиционирование */
+    bottom: 2px; /* Отступ от нижней границы футера */
+    right: 2%; /* Отступ от правой границы */
+    background-color: #316c54; /* Цвет фона */
+    color: white; /* Цвет текста */
+    border: none; /* Убираем границу */
+    border-radius: 5px; /* Скругление углов */
+    padding: 5px 10px; /* Отступы внутри кнопки */
+    font-size: 10px; /* Размер шрифта */
+    cursor: pointer; /* Указатель при наведении */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Плавный переход */
+}
+
+.scroll-to-top:hover {
+    background-color: #c89a1e; /* Цвет фона при наведении */
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
+}
+
+.scroll-to-top:focus {
+    outline: none; /* Убираем обводку при фокусе */
+}
+
+/* Стили для ссылок */
+a {
+    color: black; /* Цвет текста черный */
+    text-decoration: underline; /* Оставляем подчеркивание по умолчанию */
+    font-weight: bold; /* Жирный шрифт */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Плавный переход цвета и подчеркивания */
+}
+
+a:visited {
+    color: black; /* Цвет текста черный для посещенных ссылок */
+}
+
+a:hover {
+    text-decoration: none; /* Убираем подчеркивание при наведении */
+    color: rgb(144, 139, 139); /* Изменение цвета при наведении */
+}
+.normal-weight {
+    font-weight: normal; /* Убираем жирный шрифт */
+}
+
+table {
+    width: 100%; /* Занимает всю ширину контейнера */
+    border-collapse: collapse; /* Убирает двойные границы между ячейками */
+    margin: 20px 0; /* Отступы сверху и снизу */
+    font-family: 'Arial', sans-serif; /* Гарнитура шрифта */
+}
+th, td {
+    border: 3px solid #31b566; /* Синяя рамка для ячеек */
+    padding: 10px; /* Отступы внутри ячеек */
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+th {
+    background-color: #2980b9; /* Цвет фона заголовков */
+    color: white; /* Цвет текста заголовков */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Светло-серый фон для четных строк */
+}
+
+tr:hover {
+    background-color: #d1e7fd; /* Цвет фона строки при наведении */
+}
+
+.gallery {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    text-align: center; /* Центрирование текста на странице */
+}
+
+.gallery img {
+    width: 150px; /* Размер превью */
+    height: auto;
+    transition: 0.3s; /* Плавный переход */
+    text-align: center; /* Центрирование текста на странице */
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+    color: white;
+    text-align: center;
+    opacity: 0; /* Скрыто по умолчанию */
+    transition: opacity 0.3s; /* Плавный переход */
+}
+
+.gallery:hover .caption {
+    opacity: 1; /* Показать при наведении */
+}
+img {
+    border: 3px dotted blue; /* Задаем толщину, стиль и цвет рамки */
+    width: 100px; /* Ширина изображений */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    border-radius: 30%; /* Круглая форма изображений */
+}
+.order-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование по горизонтали */
+    justify-content: center; /* Центрирование по вертикали */
+    text-align: center; /* Центрирование текста */
+}
+
+/* Подсветка элементов формы в фокусе */
+input:focus {
+    outline: none; /* Убираем стандартное обрамление */
+    border: 2px solid rgb(0, 123, 255); /* Изменяем цвет рамки на синий */
+    background-color: rgba(0, 123, 255, 0.1); /* Легкий фон при фокусе */
+}

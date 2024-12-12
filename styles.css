@@ -1,64 +1,104 @@
-/* Стили для ссылок */
-a {
-    color: black; /* Цвет текста черный */
-    text-decoration: none; /* Убираем подчеркивание */
-    transition: color 0.3s ease; /* Плавный переход цвета */
-}
-
-a:visited {
-    color: black; /* Цвет текста черный для посещенных ссылок */
-}
-
-a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
-    color: rgb(0, 0, 0); /* Изменение цвета при наведении */
-}
-
-/* Общие стили для тела страницы */
+/* Основные стили для всего документа */
 body {
-    font-family: Arial, sans-serif; /* Шрифт для текста */
-    line-height: 1.6; /* Высота строки для лучшей читаемости */
+    font-family: 'Arial', sans-serif; /* Устанавливаем шрифт Arial с запасным шрифтом sans-serif */
+    line-height: 1.6; /* Увеличиваем межстрочный интервал для лучшей читаемости */
     margin: 0; /* Убираем отступы по умолчанию */
-    padding: 20px; /* Добавляем отступы */
-    background-color: #f4f4f4; /* Цвет фона страницы */
+    display: flex; /* Используем flexbox для расположения элементов */
+    flex-direction: column; /* Располагаем элементы в колонку */
+    min-height: 100vh; /* Минимальная высота - 100% высоты окна браузера */
+}
+
+/* Стили для заголовка */
+header {
+    background-color: #8fa09b; /* Цвет фона заголовка */
+    color: #fff; /* Цвет текста заголовка */
+    padding: 1rem 0; /* Внутренние отступы сверху и снизу */
+    text-align: center; /* Центрируем текст */
 }
 
 /* Стили для заголовков */
 h1, h2 {
-    text-align: center; /* Центрируем заголовки */
-    color: #333; /* Цвет заголовков */
+    margin-bottom: 0.5rem; /* Отступ снизу для заголовков */
+    text-align: center;
 }
 
-/* Стили для навигации */
-nav ul {
-    list-style-type: none; /* Убираем маркеры списка */
-    padding: 0; /* Убираем отступы */
+/* Основной контейнер для контента */
+main {
+    display: flex; /* Используем flexbox для расположения дочерних элементов */
+    flex-grow: 1; /* Позволяем основному контейнеру занимать доступное пространство */
 }
 
-nav ul li {
-    display: inline; /* Выстраиваем ссылки в строку */
-    margin: 0 15px; /* Добавляем отступы между ссылками */
+/* Стили для боковой панели */
+aside.sidebar {
+    background-color: #f0f0f0; /* Цвет фона боковой панели */
+    width: 200px; /* Ширина боковой панели */
+    padding: 1rem; /* Внутренние отступы */
+    box-sizing: border-box; /* Учитываем отступы и границы в ширине */
+    position: relative; /* Для абсолютного позиционирования кнопки внутри */
 }
 
 /* Стили для основного контента */
-main {
-    background: white; /* Цвет фона основного контента */
-    padding: 20px; /* Отступы внутри основного контента */
-    border-radius: 8px; /* Скругление углов */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для эффекта глубины */
+section.content {
+    padding: 1rem; /* Внутренние отступы для контента */
+    flex-grow: 1; /* Позволяем контенту занимать оставшееся пространство */
 }
 
-/* Стили для подвала */
+/* Стили для нижнего колонтитула */
 footer {
-    text-align: left; /* Центрируем текст в подвале */
-    margin-top: 20px; /* Отступ сверху */
-    color: #777; /* Цвет текста подвала */
+    background-color: #8fa09b; /* Цвет фона нижнего колонтитула */
+    color: #fff; /* Цвет текста нижнего колонтитула */
+    padding: 1rem 0; /* Внутренние отступы сверху и снизу */
+    text-align: left; /* Выравнивание текста влево */
+    padding-left: 30px; /* Добавляем небольшой отступ слева */
 }
+
+/* Адаптивный дизайн для небольших экранов */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Изменяем направление flex-контейнера на колонку для мобильных устройств */
+    }
+    aside.sidebar {
+        width: 100%; /* Устанавливаем ширину боковой панели на 100% */
+        margin-bottom: 1rem; /* Добавляем отступ снизу для разделения с контентом */
+    }
+}
+
+/* Стили для ссылок */
+a {
+    color: #333; /* Цвет текста ссылок */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+}
+nav {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline; /* Подчеркивание при наведении на ссылку */
+}
+
+.normal-weight {
+    font-weight: normal; /* Убираем жирный шрифт */
+}
+
+
+/* Стили для списков */
+ul {
+    list-style: none; /* Убираем маркеры у списков */
+    padding: 0; /* Убираем внутренние отступы */
+}
+
+li {
+    margin-bottom: 1.5rem; /* Отступ снизу для элементов списка */
+}
+
+
 /* Стили для кнопки "Наверх" */
 .scroll-to-top {
     position: fixed; /* Фиксированное положение */
-    bottom: 20px; /* Отступ от нижней границы */
-    right: 20px; /* Отступ от правой границы */
+    bottom: 130px; /* Отступ от нижней границы */
+    left: 20px; /* Отступ от правой границы */
     background-color: #316c54; /* Цвет фона */
     color: white; /* Цвет текста */
     border: none; /* Убираем границу */
@@ -77,12 +117,21 @@ footer {
 .scroll-to-top:focus {
     outline: none; /* Убираем обводку при фокусе */
 }
-
-body {
-    text-align: center; /* Центрирование текста на странице */
-}
-
-.gallery {
+/* Стили для абзаца с историей компании */
+.special-paragraph {
+    font-size: 2em; /* Увеличенный размер шрифта */
+    font-family: 'Times New Roman', serif; /* Или другой подходящий шрифт */
+    line-height: 1.6; /* Расстояние между строками */
+    color: #333; /* Темно-серый цвет текста */
+    text-align: center; /* Выравнивание по центру */
+    margin-top: 2em; /* Отступ сверху */
+    margin-bottom: 2em; /* Отступ снизу */
+    padding: 1em 2em; /* Внутренние отступы */
+    background-color: #ffffff; /* Светло-серый фон */
+    border-radius: 5px; /* Скругленные углы */
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.1); /* Тень */
+  }
+  .gallery {
     position: relative;
     display: inline-block;
     margin: 10px;
@@ -94,18 +143,3 @@ body {
     transition: 0.3s; /* Плавный переход */
 }
 
-.caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
-    color: white;
-    text-align: center;
-    opacity: 0; /* Скрыто по умолчанию */
-    transition: opacity 0.3s; /* Плавный переход */
-}
-
-.gallery:hover .caption {
-    opacity: 1; /* Показать при наведении */
-}
