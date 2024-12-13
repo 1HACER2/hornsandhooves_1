@@ -11,38 +11,38 @@ body {
     
    }
    #container {
-    width: 800px; /* Ширина слоя */
+    width: 1000px; /* Ширина слоя */
     margin: 0 auto; /* Выравнивание по центру */
     background: #f0f0f0; /* Цвет фона левой колонки */
    }
-   #header {
-    font-size: 2.2em; /* Размер текста для верхнего заголовка */
+   header {
+    font-size: 1.5em; /* Размер текста для верхнего заголовка */
     text-align: center; /* Выравнивание по центру */
-    padding: 5px; /* Отступы вокруг текста */
+    padding: 2px; /* Отступы вокруг текста */
     background: #8fa09b; /* Цвет фона шапки */
     color: #ffe; /* Цвет текста */
 }
 
 .sub-header {
-    font-size: 1.5em; /* Размер текста для нижнего заголовка */
+    font-size: 1.3em; /* Размер текста для нижнего заголовка */
     text-align: center; /* Выравнивание по центру */
-    padding: 5px; /* Отступы вокруг текста */
+    padding: 2px; /* Отступы вокруг текста */
     background: #8fa09b; /* Цвет фона, можно оставить тем же */
     color: #ffe; /* Цвет текста, можно оставить тем же */
 }
-   #sidebar {
+   nav {
     margin-top: 15px; 
-    width: 100px; /* Ширина слоя */
+    width: 155px; /* Ширина слоя */
     padding: 0 10px; /* Отступы вокруг текста */
     float: left; /* Обтекание по правому краю */
    }
    #content {
-    margin-left: 110px; /* Отступ слева */
+    margin-left: 160px; /* Отступ слева */
     padding: 10px; /* Поля вокруг текста */
     background: #fff; /* Цвет фона правой колонки */
     min-height: 300px; /* Минимальная высота контейнера */
 }
-#footer {
+ footer {
     background: #8fa09b; /* Цвет фона подвала */
     color: #fff; /* Цвет текста */
     padding: 5px; /* Отступы вокруг текста */
@@ -73,28 +73,56 @@ body {
     outline: none; /* Убираем обводку при фокусе */
 }
 
-/* Стили для ссылок */
-a {
+nav ul {
+    list-style-type: none; /* Убираем стандартные маркеры */
+    padding: 0; /* Убираем отступы */
     color: black; /* Цвет текста черный */
-    text-decoration: underline; /* Оставляем подчеркивание по умолчанию */
+
     font-weight: bold; /* Жирный шрифт */
     transition: color 0.3s ease, text-decoration 0.3s ease; /* Плавный переход цвета и подчеркивания */
+}
+
+nav li {
+    position: relative; /* Для позиционирования маркера */
+    padding-left: 12px; /* Отступ для текста от маркера */
+    color: black; /* Цвет текста черный */
+    margin-bottom: 12px; /* Увеличиваем расстояние между ссылками */
+}
+
+nav li::before {
+    content: '•'; /* Ваш собственный маркер */
+    position: absolute; /* Позиционируем маркер */
+    left: 0; /* Слева от текста */
+    color: black; /* Цвет маркера */
+    transition: color 0.3s ease; /* Плавный переход цвета маркера */
+}
+
+nav li:hover::before {
+    color: rgb(144, 139, 139); /* Изменение цвета маркера при наведении */
+}
+
+nav li a {
+    color: black; /* Цвет текста черный */
+    font-weight: bold; /* Жирный шрифт */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Плавный переход цвета и подчеркивания */
+}
+
+nav li:hover a {
+    padding-left: 10px; /* Сдвигаем текст вправо на 10px при наведении */
+    text-decoration: none; /* Убираем подчеркивание при наведении */
+    color: rgb(144, 139, 139); /* Изменение цвета текста при наведении */
 }
 
 a:visited {
     color: black; /* Цвет текста черный для посещенных ссылок */
 }
 
-a:hover {
-    text-decoration: none; /* Убираем подчеркивание при наведении */
-    color: rgb(144, 139, 139); /* Изменение цвета при наведении */
-}
 .normal-weight {
     font-weight: normal; /* Убираем жирный шрифт */
 }
 
 table {
-    width: 100%; /* Занимает всю ширину контейнера */
+    width: 99%; /* Занимает всю ширину контейнера */
     border-collapse: collapse; /* Убирает двойные границы между ячейками */
     margin: 20px 0; /* Отступы сверху и снизу */
     font-family: 'Arial', sans-serif; /* Гарнитура шрифта */
@@ -166,3 +194,43 @@ input:focus {
     border: 2px solid rgb(0, 123, 255); /* Изменяем цвет рамки на синий */
     background-color: rgba(0, 123, 255, 0.1); /* Легкий фон при фокусе */
 }
+ul {
+    list-style-type: disc; /* Использовать дисковые маркеры для маркированных списков */
+    margin-left: 0px; /* Отступ для списка */
+}
+
+.education-table {
+    width: 99%; /* Таблица занимает всю ширину контейнера */
+    border-collapse: collapse; /* Убираем двойные границы */
+    margin: 20px 0; /* Отступы сверху и снизу */
+    font-family: 'Arial', sans-serif; /* Шрифт таблицы */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+table.tabl th {
+    background-color: #ff0000; /* Красный цвет фона */
+    color: #ffffff; /* Белый цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+    font-style: italic; /* Курсив для текста */
+  }
+  .total-row {
+    font-weight: bold; /* Жирный шрифт */
+    text-align: right; /* Выравнивание текста по правому краю */
+  }
+  .total-header {
+    text-align: right; /* Выравнивание текста по правому краю */
+    font-weight: bold; /* Жирный шрифт */
+  }
+  .tabl {
+    border-collapse: separate; /* Разделяет рамки ячеек */
+    border-spacing: 2px; /* Промежуток между ячейками */
+    width: 99%; /* Ширина таблицы */
+    border: 1px solid black; /* Тонкая рамка вокруг всей таблицы */
+  }
+  
+  .tabl th, .tabl td {
+    border: 1px solid black; /* Тонкая рамка вокруг ячеек */
+    padding: 5px; /* Отступы внутри ячеек */
+  
+    vertical-align: middle; /* Вертикальное выравнивание по центру */
+  }
