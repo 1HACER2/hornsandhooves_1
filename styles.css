@@ -1,163 +1,252 @@
-/* Стили для ссылок */
-a {
-    color: black; /* Цвет текста черный */
-    text-decoration: none; /* Убираем подчеркивание */
-    transition: color 0.3s ease; /* Плавный переход цвета */
-}
-
-a:visited {
-    color: black; /* Цвет текста черный для посещенных ссылок */
-}
-
-a:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
-    color: rgb(0, 0, 0); /* Изменение цвета при наведении */
-}
-
-/* Общие стили для тела страницы */
+/* ФОН */
 body {
-     font-family: 'Verdana', sans-serif; /* Шрифт для текста */
-    line-height: 1.6; /* Высота строки для лучшей читаемости */
-    margin: 0; /* Убираем отступы по умолчанию */
-    padding: 20px; /* Добавляем отступы */
-    background-color: #f4f4f4; /* Цвет фона страницы */
+    font: 10pt Arial, Helvetica, sans-serif; /* Шрифт на веб-странице */
+    background: #e1dfb9; /* Цвет фона */
 }
 
-/* Стили для заголовков */
-h1, h2 {
-    text-align: center; /* Центрируем заголовки */
-    color: #333; /* Цвет заголовков */
+/* ГЛАВНЫЙ КОНТЕЙНЕР */
+.container {
+    display: flex; /* Используем Flexbox */
+    flex-direction: column; /* Вертикальное расположение элементов */
+    width: 1000px; /* Ширина слоя */
+    margin: 0 auto; /* Выравнивание по центру */
+    background: #f0f0f0; /* Цвет фона контейнера */
 }
 
-/* Стили для навигации */
-nav ul {
-    list-style-type: none; /* Убираем маркеры списка */
-    padding: 0; /* Убираем отступы */
+/* ЗАГОЛОВОК-ШАПКА */
+header {
+    font-size: 1.5em; /* Размер текста для верхнего заголовка */
+    text-align: center; /* Выравнивание по центру */
+    padding: 2px; /* Отступы вокруг текста */
+    background: #8fa09b; /* Цвет фона шапки */
+    color: #ffe; /* Цвет текста */
 }
 
-nav ul li {
-    display: inline; /* Выстраиваем ссылки в строку */
-    margin: 0 15px; /* Добавляем отступы между ссылками */
-}
-/* стили для абзацев */
-p {
-    color: #333; /* Задайте желаемый цвет текста */
-    font-family: 'Arial', sans-serif; /* Замените на нужную гарнитуру шрифта */
-}
-/* Стили для основного контента */
-main {
-    background: white; /* Цвет фона основного контента */
-    padding: 20px; /* Отступы внутри основного контента */
-    border-radius: 8px; /* Скругление углов */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для эффекта глубины */
+/* ГЛАВНЫЙ КОНТЕЙНЕР С МЕНЮ И СОДЕРЖИМЫМ */
+.main-content {
+    display: flex; /* Используем Flexbox для основного контента */
+    flex: 1; /* Занимаем оставшееся пространство */
 }
 
-/* Стили для подвала */
+/* КОНТЕЙНЕР СЛЕВА ДЛЯ МЕНЮ */
+nav {
+    margin-top: 15px; 
+    width: 155px; /* Ширина слоя */
+    padding: 0 10px; /* Отступы вокруг текста */
+}
+
+/* КОНТЕЙНЕР ДЛЯ РАБОЧЕГО МЕСТА */
+.content {
+    margin-left: 10px; /* Отступ слева */
+    padding: 10px; /* Поля вокруг текста */
+    background: #fff; /* Цвет фона правой колонки */
+    min-height: 300px; /* Минимальная высота контейнера */
+    flex: 1; /* Занимаем оставшееся пространство */
+}
+
+/* ПОДВАЛ */
 footer {
-    text-align: left; /* Центрируем текст в подвале */
-    margin-top: 20px; /* Отступ сверху */
-    color: #777; /* Цвет текста подвала */
+    background: #8fa09b; /* Цвет фона подвала */
+    color: #fff; /* Цвет текста */
+    padding: 5px; /* Отступы вокруг текста */
+    clear: both; /* Отменяем действие float */
+    position: relative; /* Устанавливаем относительное позиционирование */
 }
-/* Стили для кнопки "Наверх" */
+    /* ЗАГОЛОВОК-ШАПКА */
+header {
+    font-size: 1.5em; /* Размер текста для верхнего заголовка */
+    text-align: center; /* Выравнивание по центру */
+    padding: 2px; /* Отступы вокруг текста */
+    background: #8fa09b; /* Цвет фона шапки */
+    color: #ffe; /* Цвет текста */
+    }
+    /* БОЛЕЕ МЕНЬШИЙ ЗАГОЛОВОК */
+h2 {
+    font-size: 1.1em; /* Размер шрифта */
+    color: #800040; /* Цвет текста */
+    margin-top: 0; /* Отступ сверху */
+    text-align: center; /* Центрирование текста на странице */
+    }
+    /* ДЛЯ КНОПКИ ВВЕРХ */
 .scroll-to-top {
-    position: fixed; /* Фиксированное положение */
-    bottom: 20px; /* Отступ от нижней границы */
-    right: 20px; /* Отступ от правой границы */
+    position: absolute; /* Изменяем на абсолютное позиционирование */
+    bottom: 2px; /* Отступ от нижней границы футера */
+    right: 2%; /* Отступ от правой границы */
     background-color: #316c54; /* Цвет фона */
     color: white; /* Цвет текста */
     border: none; /* Убираем границу */
     border-radius: 5px; /* Скругление углов */
-    padding: 10px 15px; /* Отступы внутри кнопки */
-    font-size: 15px; /* Размер шрифта */
+    padding: 5px 10px; /* Отступы внутри кнопки */
+    font-size: 10px; /* Размер шрифта */
     cursor: pointer; /* Указатель при наведении */
     transition: background-color 0.3s ease, transform 0.3s ease; /* Плавный переход */
-}
-
+    }
 .scroll-to-top:hover {
     background-color: #c89a1e; /* Цвет фона при наведении */
     transform: scale(1.05); /* Увеличение кнопки при наведении */
-}
-
+    }
 .scroll-to-top:focus {
     outline: none; /* Убираем обводку при фокусе */
-}
-
-body {
-    text-align: center; /* Центрирование текста на странице */
-}
-
+    }
+    /* ДЛЯ МАРКЕЛОВ У ССЫЛОК */
+nav ul {
+    list-style-type: none; /* Убираем стандартные маркеры */
+    padding: 0; /* Убираем отступы */
+    color: black; /* Цвет текста черный */
+    font-weight: bold; /* Жирный шрифт */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Плавный переход цвета и подчеркивания */
+    }
+nav li {
+    position: relative; /* Для позиционирования маркера */
+    padding-left: 12px; /* Отступ для текста от маркера */
+    color: black; /* Цвет текста черный */
+    margin-bottom: 12px; /* Увеличиваем расстояние между ссылками */
+    font-weight: bold; /* Жирный шрифт */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Плавный переход цвета и подчеркивания */
+    }
+nav li::before {
+    content: '•'; /*собственный маркер */
+    position: absolute; /* Позиционируем маркер */
+    left: 0; /* Слева от текста */
+    color: black; /* Цвет маркера */
+    transition: color 0.3s ease; /* Плавный переход цвета маркера */
+    }
+nav li:hover::before {
+    color: rgb(144, 139, 139); /* Изменение цвета маркера при наведении */
+    }
+nav li:hover a {
+    padding-left: 10px; /* Сдвигаем текст вправо на 10px при наведении */
+    text-decoration: none; /* Убираем подчеркивание при наведении */
+    color: rgb(144, 139, 139); /* Изменение цвета текста при наведении */
+    }
+a:visited {
+    color: black; /* Цвет текста черный для посещенных ссылок */
+    }
+.normal-weight {
+    font-weight: normal; /* Убираем жирный шрифт для мвд*/
+    }
+    /* ДЛЯ ВСЕХ ТАБЛИЦ */
+table {
+    width: 99%; /* Занимает всю ширину контейнера */
+    border-collapse: collapse; /* Убирает двойные границы между ячейками */
+    margin: 20px 0; /* Отступы сверху и снизу */
+    font-family: 'Arial', sans-serif; /* Гарнитура шрифта */
+    }
+th, td {
+    border: 3px solid #31b566; /* Синяя рамка для ячеек */
+    padding: 10px; /* Отступы внутри ячеек */
+    text-align: left; /* Выравнивание текста по левому краю */
+    }
+th {
+    background-color: #2980b9; /* Цвет фона заголовков */
+    color: white; /* Цвет текста заголовков */
+    }
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Светло-серый фон для четных строк */
+    }
+tr:hover {
+    background-color: #d1e7fd; /* Цвет фона строки при наведении */
+    }
+    /* ДЛЯ ТАБЛИЦЫ ОБРАЗОВАНИЕ */
+.education {
+    width: 99%; /* Таблица занимает всю ширину контейнера */
+    border-collapse: collapse; /* Убираем двойные границы */
+    margin: 20px 0; /* Отступы сверху и снизу */
+    font-family: 'Arial', sans-serif; /* Шрифт таблицы */
+    text-align: center; /* Выравнивание текста по центру */
+    border-collapse: separate; /* Разделяет рамки ячеек */
+    border-spacing: 2px; /* Промежуток между ячейками */
+    width: 99%; /* Ширина таблицы */
+    border: 1px solid black; /* Тонкая рамка вокруг всей таблицы */
+    }
+table.education th {
+    background-color: #ff0000; /* Красный цвет фона */
+    color: #ffffff; /* Белый цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+    font-style: italic; /* Курсив для текста */
+    }
+.total-row {
+    font-weight: bold; /* Жирный шрифт */
+    text-align: right; /* Выравнивание текста по правому краю */
+    }
+.total-header {
+    text-align: right; /* Выравнивание текста по правому краю */
+    font-weight: bold; /* Жирный шрифт */
+    }
+.education th, .education td {
+    border: 1px solid black; /* Тонкая рамка вокруг ячеек */
+    padding: 5px; /* Отступы внутри ячеек */  
+    vertical-align: middle; /* Вертикальное выравнивание по центру */
+    transition: opacity 0.3s ease; /* Плавный переход для изменения прозрачности */
+    }
+.education td:hover, .education th:hover {
+    opacity: 0; /* Прозрачность текста при наведении */
+    }
+    /* ДЛЯ ГАЛЕРЕИИ */
 .gallery {
-    position: relative;
-    display: inline-block;
-    margin: 10px;
-}
-
+    position: relative; /* Устанавливает относительное позиционирование для контейнера галереи */
+    display: inline-block; /* Позволяет элементу занимать только необходимое пространство */
+    margin: 10px; /* Отступ вокруг галереи */
+    text-align: center; /* Центрирование текста внутри галереи */
+    }
 .gallery img {
-    width: 150px; /* Размер превью */
-    height: auto;
-    transition: 0.3s; /* Плавный переход */
-}
-
+    width: 150px; /* Устанавливает ширину изображений в галерее */
+    height: auto; /* Автоматическая высота для сохранения пропорций изображения */
+    transition: 0.3s; /* Плавный переход для эффектов при наведении */
+    text-align: center; /* Центрирование текста (хотя это не обязательно для изображений) */
+    }
 .caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
-    color: white;
-    text-align: center;
-    opacity: 0; /* Скрыто по умолчанию */
-    transition: opacity 0.3s; /* Плавный переход */
-}
-
+    position: absolute; /* Абсолютное позиционирование для размещения элемента относительно родителя */
+    bottom: 0; /* Прикрепляет элемент к нижней части родительского контейнера */
+    left: 0; /* Устанавливает элемент в левом краю родительского контейнера */
+    right: 0; /* Устанавливает элемент в правом краю родительского контейнера */
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон с 70% непрозрачностью */
+    color: white; /* Цвет текста - белый */
+    text-align: center; /* Центрирование текста внутри элемента */
+    opacity: 0; /* Элемент скрыт по умолчанию */
+    transition: opacity 0.3s; /* Плавный переход для изменения непрозрачности */
+    }
 .gallery:hover .caption {
     opacity: 1; /* Показать при наведении */
-}
+    }
+    /* ДЛЯ ВСЕХ ИЗОБРАЖЕНИЙ */
 img {
     border: 3px dotted blue; /* Задаем толщину, стиль и цвет рамки */
     width: 100px; /* Ширина изображений */
     height: auto; /* Автоматическая высота для сохранения пропорций */
     border-radius: 30%; /* Круглая форма изображений */
+    }
+   /* ДЛЯ ФОРМЫ ЗАКАЗА */
+.order-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование по горизонтали */
+    justify-content: center; /* Центрирование по вертикали */
+    text-align: center; /* Центрирование текста */
+    }
+input:focus { /* Подсветка элементов формы в фокусе */
+    outline: none; /* Убираем стандартное обрамление */
+    border: 2px solid rgb(0, 123, 255); /* Изменяем цвет рамки на синий */
+    background-color: rgba(0, 123, 255, 0.1); /* Легкий фон при фокусе */ 
+    }
+.dodin {
+    text-align: center; /* Выравнивание текста по правому краю */
+    font-weight: bold; /* Жирный шрифт */
+    }
+/* ГОРИЗОНТАЛЬНОЕ МЕНЮ */
+.horizontal-menu {
+    display: flex; /* Используем Flexbox для горизонтального меню */
+    justify-content: space-around; /* Распределяем элементы по горизонтали */
+    background: #6fa091; /* Цвет фона меню */
+    padding: 10px 0; /* Отступы вокруг текста */
+    margin-top: 15px; 
+    width: 981px; /* Ширина слоя */
+    padding: 0 10px; /* Отступы вокруг текста */
+    margin: 0%;
+
 }
-.menu a {
-    color: #ff5733; /* Ярко-оранжевый цвет для ссылок в меню */
+.horizontal-menu a {
+    color: #fff; /* Цвет текста */
     text-decoration: none; /* Убираем подчеркивание */
-    font-weight: bold; /* Делаем текст жирным */
-}
-
-.menu a:hover {
-    color: #c70039; /* Цвет при наведении */
-    text-decoration: underline; /* Подчеркивание при наведении */
-}
-table {
-    width: 100%; /* Занимает всю ширину контейнера */
-    border-collapse: collapse; /* Убирает двойные границы между ячейками */
-    margin: 20px 0; /* Отступы сверху и снизу */
-    font-family: 'Arial', sans-serif; /* Гарнитура шрифта */
-}
-th, td {
-    border: 3px solid #3498db; /* Синяя рамка для ячеек */
-    padding: 10px; /* Отступы внутри ячеек */
-    text-align: left; /* Выравнивание текста по левому краю */
-}
-
-th {
-    background-color: #2980b9; /* Цвет фона заголовков */
-    color: white; /* Цвет текста заголовков */
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2; /* Светло-серый фон для четных строк */
-}
-
-tr:hover {
-    background-color: #d1e7fd; /* Цвет фона строки при наведении */
-}
-.menu a.external-link {
-    color: #e74c3c; /* Красный цвет для внешней ссылки */
-    font-weight: bold; /* Жирный текст */
-}
-
-.menu a.external-link:hover {
-    text-decoration: underline; /* Подчеркивание при наведении */
+    padding: 10px 15px; /* Отступы вокруг ссылок */
 }
